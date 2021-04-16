@@ -1,0 +1,53 @@
+import React from 'react';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+
+export default  class WriteStory extends React.Component {
+    render() {
+        return(
+            <View style = { styles.container }>
+                <View style = { styles.header }>
+                    <Text style = { styles.title }>
+                        STORY HUB
+                    </Text>
+                </View>
+                <View style = { styles.inputView }>
+                    <TextInput 
+                        style = { styles.inputBox }
+                        placeholder = "Story Title" />
+                </View>
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#00154f',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    header: {
+        backgroundColor: '#f4af1b',
+        borderRadius: 20,
+    },
+    title: {
+        color: '#152238',
+        padding: 30,
+        fontSize: 60,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    inputBox: {
+        width: 200,
+        height: 40,
+        borderWidth: 1.5,
+        borderRightWidth: 0,
+        fontSize: 20,
+        color: '#f4af1b'
+    },
+    inputView: {
+        flexDirection: 'row',
+        margin: 20,
+    },
+})
